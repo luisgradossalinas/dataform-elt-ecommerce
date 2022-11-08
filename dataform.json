@@ -1,7 +1,6 @@
 {
   "warehouse": "bigquery",
-  "defaultSchema": "melon_bronze",
-  "assertionSchema": "melon_quality",
+  "defaultSchema": "ecommerce",
   "defaultDatabase": "TUIDPROYECTO",
   "defaultLocation": "us-central1",
   "vars": {
