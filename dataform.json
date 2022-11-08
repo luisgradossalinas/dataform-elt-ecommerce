@@ -2,7 +2,7 @@
   "warehouse": "bigquery",
   "defaultSchema": "ecommerce",
   "assertionSchema": "ecommerce_silver",
-  "defaultDatabase": "jovial-welder-367917",
+  "defaultDatabase": "TUDIPROYECTO",
   "defaultLocation": "us-central1",
   "vars": {
     "bronze_dataset_name": "ecommerce",
