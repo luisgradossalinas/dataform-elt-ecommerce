@@ -1,10 +1,12 @@
 {
-    "warehouse": "bigquery",
-    "defaultSchema": "ecommerce",
-    "defaultDatabase": "TUIDPROYECTO",
-    "vars": {
-		"bronze_dataset_name": "ecommerce",
-	    "silver_dataset_name": "ecommerce_silver",
-	    "gold_dataset_name": "ecommerce_gold"
-	}
+  "warehouse": "bigquery",
+  "defaultSchema": "melon_bronze",
+  "assertionSchema": "melon_quality",
+  "defaultDatabase": "TUIDPROYECTO",
+  "defaultLocation": "US",
+  "vars": {
+    "bronze_dataset_name": "ecommerce",
+    "silver_dataset_name": "ecommerce_silver",
+    "gold_dataset_name": "ecommerce_gold"
+  }
 }
