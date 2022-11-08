@@ -8,12 +8,12 @@ WITH
   first_orders AS (
   SELECT * FROM (
   SELECT
-    o.order_id,
-    o.user_id,
-    ROW_NUMBER() OVER(PARTITION BY o.user_id ORDER BY o.created_at ASC) order_sequence
+    order_id,
+    user_id,
+    ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY created_at ASC) order_sequence
   FROM
     ${ref("stg_orders")}
-  WHERE o.status NOT IN ('Cancelled','Returned')) WHERE order_sequence = 1 ) 
+  WHERE status NOT IN ('Cancelled','Returned')) WHERE order_sequence = 1 ) 
       
 SELECT
   p.category,
