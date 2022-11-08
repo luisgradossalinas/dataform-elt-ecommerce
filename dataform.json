@@ -1,6 +1,7 @@
 {
   "warehouse": "bigquery",
   "defaultSchema": "ecommerce",
+  "assertionSchema": "ecommerce_silver",
   "defaultDatabase": "jovial-welder-367917",
   "defaultLocation": "us-central1",
   "vars": {
