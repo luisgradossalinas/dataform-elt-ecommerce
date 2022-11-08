@@ -1,0 +1,27 @@
+config {
+  type: "table",
+  schema: dataform.projectConfig.vars.gold_dataset_name,
+  description: "Compras Query2"
+}
+
+WITH
+  first_orders AS (
+  SELECT * FROM (
+  SELECT
+    o.order_id,
+    o.user_id,
+    ROW_NUMBER() OVER(PARTITION BY o.user_id ORDER BY o.created_at ASC) order_sequence
+  FROM
+    ${ref("stg_orders")}
+  WHERE o.status NOT IN ('Cancelled','Returned')) WHERE order_sequence = 1 ) 
+      
+SELECT
+  p.category,
+  SUM(oi.sale_price) revenue,
+  COUNT(DISTINCT fo.user_id) user_count
+FROM first_orders fo
+LEFT JOIN ${ref("stg_order_items")} oi ON oi.order_id = fo.order_id
+LEFT JOIN ${ref("stg_products")} p
+ON p.id = oi.product_id
+GROUP BY p.category
+ORDER BY 2 desc

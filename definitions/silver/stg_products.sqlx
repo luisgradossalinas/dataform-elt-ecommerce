@@ -1,0 +1,7 @@
+config {
+  type: "table",
+  schema: dataform.projectConfig.vars.silver_dataset_name,
+  description: "Products"
+}
+
+select * from ${ref("products")}

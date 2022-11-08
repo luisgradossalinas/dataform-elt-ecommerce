@@ -1,0 +1,13 @@
+config {
+  type: "table",
+  schema: dataform.projectConfig.vars.silver_dataset_name,
+  description: "Order information",
+  columns: {
+    id: "Order id",
+  },
+  assertions: {
+    uniqueKey: ["order_id"]
+  }
+}
+
+select * from ${ref("orders")}

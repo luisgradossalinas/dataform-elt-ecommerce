@@ -1,0 +1,17 @@
+config {
+  type: "table",
+  schema: dataform.projectConfig.vars.gold_dataset_name,
+  description: "Sales by day"
+}
+
+SELECT
+  cast(o.created_at as date) AS order_created_date,
+  SUM(oi.sale_price) AS revenue,
+  COUNT(DISTINCT o.order_id) AS order_count,
+  COUNT(DISTINCT o.user_id) AS customers_orderd
+FROM ${ref("stg_orders")} o
+LEFT JOIN ${ref("stg_order_items")} oi
+ON o.order_id = oi.order_id
+WHERE o.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 1 desc
