@@ -3,7 +3,7 @@
   "defaultSchema": "melon_bronze",
   "assertionSchema": "melon_quality",
   "defaultDatabase": "TUIDPROYECTO",
-  "defaultLocation": "US",
+  "defaultLocation": "us-central1",
   "vars": {
     "bronze_dataset_name": "ecommerce",
     "silver_dataset_name": "ecommerce_silver",
