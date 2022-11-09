@@ -1,7 +1,8 @@
 config {
   type: "table",
   schema: dataform.projectConfig.vars.gold_dataset_name,
-  description: "Sales by day"
+  description: "Sales by day",
+  tags : ["gold"]
 }
 
 SELECT
