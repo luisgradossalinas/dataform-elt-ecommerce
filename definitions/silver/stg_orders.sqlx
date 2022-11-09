@@ -5,6 +5,7 @@ config {
   columns: {
     id: "Order id",
   },
+  tags : ["silver"],
   assertions: {
     uniqueKey: ["order_id"]
   }
