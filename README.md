@@ -1,2 +1,2 @@
-# building-elt-dataform-bigquery
+# dataform-elt-ecommerce
 
