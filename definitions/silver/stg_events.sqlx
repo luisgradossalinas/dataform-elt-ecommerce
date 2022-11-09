@@ -5,6 +5,7 @@ config {
   columns: {
     id: "Events id",
   },
+  tags : ["silver"],
   assertions: {
     uniqueKey: ["id"]
   }
