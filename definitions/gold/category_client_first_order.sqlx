@@ -1,7 +1,7 @@
 config {
   type: "table",
   schema: dataform.projectConfig.vars.gold_dataset_name,
-  description: "Compras Query2",
+  description: "Categoría clientes",
   tags : ["gold"]
 }
 
