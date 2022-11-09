@@ -4,6 +4,9 @@ config {
   description: "Events information",
   columns: {
     id: "Events id",
+    user_id : "User id",
+    created_at : "Created",
+    browser : "Browser client"
   },
   tags : ["silver"],
   assertions: {
@@ -11,4 +14,5 @@ config {
   }
 }
 
-select * from ${ref("events")}
+select id,user_id,sequence_number,created_at,browser
+  from ${ref("events")}
