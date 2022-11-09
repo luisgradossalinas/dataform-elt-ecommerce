@@ -5,6 +5,7 @@ config {
   columns: {
     id: "Distribution center id",
   },
+  tags : ["silver"],
   assertions: {
     uniqueKey: ["id"]
   }
