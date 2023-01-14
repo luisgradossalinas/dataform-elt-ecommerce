@@ -1,3 +1,3 @@
 # dataform-elt-ecommerce
 
-<img width="805" src="https://user-images.githubusercontent.com/2066453/201746985-3a8ff7b3-0041-4885-ba6d-482687a606bd.png">
+<img width="805" src="https://user-images.githubusercontent.com/2066453/212448197-609098dc-98e8-4603-babe-6fe32adf6099.png">
