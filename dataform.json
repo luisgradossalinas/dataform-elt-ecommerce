@@ -1,11 +1,11 @@
 {
   "warehouse": "bigquery",
-  "defaultSchema": "ecommerce",
+  "defaultSchema": "ecommerce_bronze",
   "assertionSchema": "ecommerce_silver",
-  "defaultDatabase": "TUDIPROYECTO",
+  "defaultDatabase": "hypnotic-guard-368114",
   "defaultLocation": "us-central1",
   "vars": {
-    "bronze_dataset_name": "ecommerce",
+    "bronze_dataset_name": "ecommerce_bronze",
     "silver_dataset_name": "ecommerce_silver",
     "gold_dataset_name": "ecommerce_gold"
   }
